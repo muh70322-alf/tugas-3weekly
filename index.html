@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSI Student Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 HSI STUDENT MANAGEMENT</h1>
+
+        <!-- Alert / Notification -->
+        <div id="alertMessage" class="alert"></div>
+
+        <!-- Form Add / Update -->
+        <div class="card">
+            <h2 id="formTitle">➕ Tambah Siswa</h2>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="nameInput">Nama Siswa</label>
+                    <input type="text" id="nameInput" placeholder="Masukkan nama siswa" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="scoreInput">Nilai</label>
+                    <input type="number" id="scoreInput" placeholder="Masukkan nilai (0-100)" min="0" max="100" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" id="submitBtn">➕ Tambah Siswa</button>
+                    <button type="button" id="cancelEditBtn" class="btn-cancel" style="display:none;">❌ Batal Edit</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Statistik -->
+        <div class="stats">
+            <div class="stat-box">
+                <span class="stat-label">Total Siswa</span>
+                <span class="stat-value" id="totalStudents">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Rata-rata Nilai</span>
+                <span class="stat-value" id="averageScore">0</span>
+            </div>
+        </div>
+
+        <!-- Daftar Siswa -->
+        <div class="card">
+            <h2>📋 DAFTAR SISWA</h2>
+            <div id="studentList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
